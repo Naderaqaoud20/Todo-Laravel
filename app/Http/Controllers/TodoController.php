@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Todo;
-use App\Step;
+use App\Models\Todo;
+use App\Models\Step;
 use App\Http\Requests\TodoCreateRequest;
 
 class TodoController extends Controller

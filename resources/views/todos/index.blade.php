@@ -9,13 +9,12 @@
 </div>
         <ul class="my-5">
             <x-alert />
-            if (is_array($todos) || is_object($todos)){
+            @if (is_array($todos) || is_object($todos))
             @forelse($todos as $todo)
             <li class="flex justify-between p-2">
                 <div>
                     @include('todos.complete-button')
                 </div>
-}
                 @if($todo->completed)
                 <p class="line-through">{{$todo->title}}</p>
                 @else
@@ -41,6 +40,7 @@
             @empty
                         <p>No task available, create one.</p>
             @endforelse
+            @endif
         </ul>
 @endsection
 
